@@ -30,3 +30,5 @@ pngとjpgファイルに対応してます．
 カバー画像の下位2ビットをシークレット画像の上位2ビットに置き換える
 > python lsb.py -c cover_image.png -s secret_image.png -l 2
 ```
+
+![img](https://raw.githubusercontent.com/ymt117/steganography-lsb/master/lsb_sample.png)
