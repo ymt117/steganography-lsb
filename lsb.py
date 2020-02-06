@@ -34,7 +34,7 @@ def secret_image_resize(img_cov, img_sec):
     print("w "+str(w_sec)+" h "+str(h_sec))
     return img_sec
 
-def encode_csv(cover_file, secret_file):
+def encode(cover_file, secret_file):
     # 画像を読み込む
     with Image.open(cover_file) as img_cov:
         with Image.open(secret_file) as img_sec:
@@ -84,7 +84,7 @@ def ret_shift_bits():
     else:
         return 0b11111111
 
-def decode_csv(filename):
+def decode(filename):
     # 画像を読み込む
     with Image.open(filename) as img:
         width, height = img.size
@@ -114,8 +114,8 @@ else:
     args.l = int(args.l)
 
 if args.c is not None and args.s is not None:
-    encode_csv(args.c, args.s)
+    encode(args.c, args.s)
 elif args.d is not None:
-    decode_csv(args.d)
+    decode(args.d)
 else:
     print("Error!")
